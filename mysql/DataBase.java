@@ -17,8 +17,8 @@ import java.sql.Statement;
  */
 public class DataBase {
 
-    private String USER = "root";
-    private String PASS = "Discord1";
+    private String USER = "YOUR_USERNAME_HERE";
+    private String PASS = "YOUR_PASSWORD_HERE";
     private String CON_STR = "jdbc:mysql://localhost:3306/todo?useSSL=false";
 
     private Connection con;
