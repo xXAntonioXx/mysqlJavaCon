@@ -18,8 +18,8 @@ import java.sql.Statement;
  */
 public class DataBase {
 
-    private String USER = "root";
-    private String PASS = "Discord1";
+    private String USER = "tu_nombre_de_usuario";
+    private String PASS = "tu_contraseña";
     private String CON_STR = "jdbc:mysql://localhost:3306/jm?useSSL=false";
 
     private Connection con;
