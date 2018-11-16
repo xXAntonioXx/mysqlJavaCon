@@ -1,0 +1,32 @@
+CREATE TABLE Cliente(
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(250) NOT NULL,
+	direccion VARCHAR(250) NOT NULL,
+	telefono VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE Procuradores(
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(250) NOT NULL,
+	direccion VARCHAR(250) NOT NULL,
+	telefono VARCHAR(250) NOT NULL,
+	email VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE Asunto(
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	fecha_inicio DATE NOT NULL,
+	fecha_fin DATE,
+	estatus VARCHAR(250) NOT NULL,
+	id_cliente INT(11) NOT NULL,
+	FOREIGN KEY(id_cliente) REFERENCES Cliente(id)
+);
+
+CREATE TABLE Asunto_Procurador(
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_asunto INT(11) NOT NULL,
+	id_procurador INT(11) NOT NULL,
+	FOREIGN KEY(id_asunto) REFERENCES Asunto(id),
+	FOREIGN KEY(id_procurador) REFERENCES Procuradores(id)
+);
+
